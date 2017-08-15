@@ -24,16 +24,19 @@
 <a>To connect the database click <a href="http://localhost:8080/">here</a></a></br>
   </div> 
 </div>
+
 <div class="container">
   <div class="alert alert-info text-center" role="alert">
 <input type="button" value="Start Receiving Data" onclick="openWin();myVar = setInterval(openWin, 29000)" />
   </div> 
 </div>
+
 <div class="container">
   <div class="alert alert-info text-center" role="alert">
 <h1>Temperature Data</h1>
 	  </div> 
 </div>
+<div class="jumbotron middle">
 <?php
 //Récupération des variables de sessions en début de page
 session_start();
@@ -61,6 +64,7 @@ while ($vResult = mysqli_fetch_array($vQuery))
 
 <!--Div that will hold the pie chart-->
 <div id="chart_div"></div>
+</div>
 <script type="text/javascript">
 var id0 =<?php echo json_encode($id); ?>;
 var value0 =<?php echo json_encode($value); ?>;
