@@ -1,6 +1,9 @@
+body{
+	background-image: url("/images/futur-background-1.jpg");
+}
 .jumbotron {
   background-image: url("/images/futur-background-1.jpg");
-  
+  color: white;
   padding-bottom: 80px;
 }
 .jumbotron .btn-primary {
