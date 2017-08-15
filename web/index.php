@@ -33,4 +33,8 @@ $app->get('/Subscription.php', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('Subscription.php');
 });
+$app->get('/test.php', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('test.php');
+});
 $app->run();
