@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<p>Coucou</p>
+
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -19,13 +19,21 @@
 	}
   
 </script>
-
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
 <a>To connect the database click <a href="http://localhost:8080/">here</a></a></br>
-
+  </div> 
+</div>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
 <input type="button" value="Start Receiving Data" onclick="openWin();myVar = setInterval(openWin, 29000)" />
-
+  </div> 
+</div>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
 <h1>Temperature Data</h1>
-	
+	  </div> 
+</div>
 <?php
 //Récupération des variables de sessions en début de page
 session_start();
