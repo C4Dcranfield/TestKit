@@ -22,12 +22,12 @@ $vSql ="CREATE TABLE Temperature
 		kit_ID int,
 		ID_T int NOT NULL AUTO_INCREMENT,
 		heure int,
-		Minute int,
-		Second int
+		minute int,
+		second int
 		);";
 $vQuery=mysqli_query($vConn,$vSql);
 
-$vSql ="INSERT INTO `testkit`.`temperature` (`Value_T`, `kit_ID`, `ID_T`, `heure`, `minute`, `second`) VALUES ('2', '1', NULL, '3', '4', '5');";
+$vSql ="INSERT INTO `db2f0ivcdh2a5s`.`temperature` (`Value_T`, `kit_ID`, `ID_T`, `heure`, `minute`, `second`) VALUES ('2', '1', NULL, '3', '4', '5');";
 $vQuery=mysqli_query($vConn,$vSql);
 
 $vSql ="SELECT ID_T, Value_T,heure,minute,second FROM temperature data ORDER BY ID_T ;";
