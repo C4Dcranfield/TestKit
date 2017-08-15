@@ -37,4 +37,8 @@ $app->get('/Test.twig', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('Test.twig');
 });
+$app->get('/data.php', function() use($app) {
+  $app['monolog']->addDebug('logging output.');
+  return $app['twig']->render('data.php');
+});
 $app->run();
