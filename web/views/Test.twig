@@ -13,6 +13,9 @@
   <div class="alert alert-info text-center" role="alert">
 <?php
 include('connection.php');	
+$vSql ="DROP TABLE nom_table";
+$vQuery=mysqli_query($vConn,$vSql);
+
 $vSql ="CREATE TABLE Temperature
 		(
 		Value_T int,
@@ -23,8 +26,13 @@ $vSql ="CREATE TABLE Temperature
 		Second int
 		);";
 $vQuery=mysqli_query($vConn,$vSql);
+
 $vSql ="INSERT INTO `testkit`.`temperature` (`Value_T`, `kit_ID`, `ID_T`, `heure`, `minute`, `second`) VALUES ('2', '1', NULL, '3', '4', '5');";
 $vQuery=mysqli_query($vConn,$vSql);
+
+$vSql ="SELECT ID_T, Value_T,heure,minute,second FROM temperature data ORDER BY ID_T ;";
+$vQuery=mysqli_query($vConn,$vSql);
+
 while ($vResult = mysqli_fetch_array($vQuery)) 
 			{
 echo "<td>$vResult[ID_T]</td>";
