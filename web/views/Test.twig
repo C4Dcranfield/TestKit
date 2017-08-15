@@ -12,7 +12,7 @@
 <div class="container">
   <div class="alert alert-info text-center" role="alert">
 <?php
-echo "<p>test</p></br>"
+echo "<p>test</p></br>";
 include('connection.php');	
 $vSql ="DROP TABLE Temperature";
 $vQuery=mysqli_query($vConn,$vSql);
@@ -24,17 +24,17 @@ $vSql ="CREATE TABLE Temperature
 		);";
 $vQuery=mysqli_query($vConn,$vSql);
 
-$vSql ="INSERT INTO `db2f0ivcdh2a5s`.`temperature` (`Value_T`, `kit_ID`) VALUES ('25', '1');";
-$vQuery=mysqli_query($vConn,$vSql);
+$vSq2 ="INSERT INTO `db2f0ivcdh2a5s`.`temperature` (`Value_T`, `kit_ID`) VALUES ('25', '1');";
+$vQuery2=mysqli_query($vConn,$vSq2);
 
-$vSql ="SELECT Value_T, kit_ID FROM temperature;";
-$vQuery=mysqli_query($vConn,$vSql);
+$vSq3="SELECT Value_T, kit_ID FROM temperature;";
+$vQuery3=mysqli_query($vConn,$vSq3);
 
-while ($vResult = mysqli_fetch_array($vQuery)) 
+while ($vResult = mysqli_fetch_array($vQuery3)) 
 			{
 echo "<td>$vResult[ID_T]</td>";
 echo "<td>$vResult[Value_T]</td>";
-			}
+			};
 ?>
 </div>
 </div>
