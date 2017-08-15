@@ -13,7 +13,32 @@
   <div class="alert alert-info text-center" role="alert">
 <?php
 echo "<p>test</p></br>";
-include('connection.php');	
+include('connection.php');
+
+$query = "DROP TABLE Temperature";
+$result = $db->query($query);
+
+$query = "CREATE TABLE Temperature
+		(
+		Value_T int,
+		kit_ID int,
+		);";
+$result = $db->query($query);
+
+$query ="INSERT INTO `db2f0ivcdh2a5s`.`temperature` (`Value_T`, `kit_ID`) VALUES ('25', '1');";
+$result = $db->query($query);
+
+$query = "SELECT Value_T, kit_ID FROM temperature;";
+$result = $db->query($query);
+
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    echo "<tr>";
+    echo "<td>" . $row["Value_T"] . "</td>";
+    echo "<td>" . $row["kit_ID"] . "</td>";	
+    echo "</tr>";
+}
+$result->closeCursor();
+/*	
 $vSql ="DROP TABLE Temperature";
 $vQuery=mysqli_query($vConn,$vSql);
 
@@ -35,6 +60,9 @@ while ($vResult = mysqli_fetch_array($vQuery3))
 echo "<td>$vResult[ID_T]</td>";
 echo "<td>$vResult[Value_T]</td>";
 			};
+
+*/
+
 ?>
 </div>
 </div>
