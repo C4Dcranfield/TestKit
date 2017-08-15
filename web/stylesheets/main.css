@@ -37,3 +37,7 @@ body{
 .jumbotron .lang-logo img {
   max-width: 100%;
 }
+
+.middle {
+	background-image: url("/images/back1.png");
+}
