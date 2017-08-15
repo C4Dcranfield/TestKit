@@ -12,7 +12,7 @@
 <div class="container">
   <div class="alert alert-info text-center" role="alert">
 <?php
-echo "<p>test</p></br>";
+
 include('connection.php');
 
 $query = "DROP TABLE Temperature";
