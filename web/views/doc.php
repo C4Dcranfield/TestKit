@@ -1,16 +1,3 @@
-{% extends "layout.html" %}
-
-{% block content %}
-<p>Coucou</p>
-
-
-<a>To connect the database click <a href="http://localhost:8080/">here</a></a></br>
-
-<input type="button" value="Start Receiving Data" onclick="openWin();myVar = setInterval(openWin, 29000)" />
-
-<h1>Temperature Data</h1>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
 <?php
 
 $servername = "ec2-54-195-248-0.eu-west-1.compute.amazonaws.com";
@@ -28,7 +15,5 @@ echo "Connected successfully";
 
 
 ?>
-</div>
-</div>
-{% endblock %}
+
 

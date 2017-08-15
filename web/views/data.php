@@ -12,7 +12,7 @@
 <div class="container">
   <div class="alert alert-info text-center" role="alert">
 <?php
-
+echo "Cfhgfnvbjh,nsfully";
 require("doc.php");
 ?>
 </div>
