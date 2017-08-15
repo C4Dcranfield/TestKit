@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>TestKit test</title>
+{% extends "layout.html" %}
 
-    
-	
-	
-  </head>
- <body>
-  	<h1>Temperature Data</h1>
-		
+{% block content %}
+<p>Coucou</p>
+
+
+<a>To connect the database click <a href="http://localhost:8080/">here</a></a></br>
+
+<input type="button" value="Start Receiving Data" onclick="openWin();myVar = setInterval(openWin, 29000)" />
+
+<h1>Temperature Data</h1>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
 <?php
 include('connection.php');	
 $vSql ="CREATE TABLE Temperature
@@ -30,10 +30,7 @@ while ($vResult = mysqli_fetch_array($vQuery))
 echo "<td>$vResult[ID_T]</td>";
 echo "<td>$vResult[Value_T]</td>";
 			}
-	
-
-
-
 ?>
- </body>
-</html>
+</div>
+</div>
+{% endblock %}
