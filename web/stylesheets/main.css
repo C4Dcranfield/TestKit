@@ -2,7 +2,7 @@ body{
 	background-image: url("/images/bodyimage.png");
 }
 .jumbotron {
-  background-image: url("/images/futur-background-1.png");
+  background-image: url("/images/bodyimage.png");
   color: white;
   padding-bottom: 80px;
 }
