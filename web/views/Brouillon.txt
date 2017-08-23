@@ -1,0 +1,75 @@
+
+/*include('connection.php');
+
+$query = "DROP TABLE Temperature";
+$result = $db->query($query);
+
+$query = "CREATE TABLE Temperature
+		(
+		Value_T int,
+		kit_ID int,
+		);";
+$result = $db->query($query);
+
+$query ="INSERT INTO `db2f0ivcdh2a5s`.`temperature` (`Value_T`, `kit_ID`) VALUES ('25', '1');";
+$result = $db->query($query);
+
+$query = "SELECT Value_T, kit_ID FROM temperature;";
+$result = $db->query($query);
+
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    echo "<tr>";
+    echo "<td>" . $row["Value_T"] . "</td>";
+    echo "<td>" . $row["kit_ID"] . "</td>";	
+    echo "</tr>";
+}
+$result->closeCursor();
+	
+$vSql ="DROP TABLE Temperature";
+$vQuery=mysqli_query($vConn,$vSql);
+
+$vSql ="CREATE TABLE Temperature
+		(
+		Value_T int,
+		kit_ID int,
+		);";
+$vQuery=mysqli_query($vConn,$vSql);
+
+$vSq2 ="INSERT INTO `db2f0ivcdh2a5s`.`temperature` (`Value_T`, `kit_ID`) VALUES ('25', '1');";
+$vQuery2=mysqli_query($vConn,$vSq2);
+
+$vSq3="SELECT Value_T, kit_ID FROM temperature;";
+$vQuery3=mysqli_query($vConn,$vSq3);
+
+while ($vResult = mysqli_fetch_array($vQuery3)) 
+			{
+echo "<td>$vResult[ID_T]</td>";
+echo "<td>$vResult[Value_T]</td>";
+			};
+
+*/
+
+	
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['area', 'number of testkit'],
+          ['Europe',     3],
+          ['America',      2],
+          ['Asia',  5],
+          ['Oceania', 1],
+          ['Africa',    7]
+        ]);
+
+        var options = {
+          title: 'Here is the repartition of the test-kits all around the world',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>

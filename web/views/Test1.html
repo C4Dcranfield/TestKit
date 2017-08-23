@@ -1,7 +1,7 @@
-{% extends "layout.html" %}
-
-{% block content %}
- <script src="http://www.webglearth.com/v2/api.js"></script>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="http://www.webglearth.com/v2/api.js"></script>
     <script>
       function initialize() {
         var earth = new WE.map('earth_div');
@@ -18,18 +18,13 @@
         earth.setView([51.505, 0], 2);
       }
     </script>
-	<style>
+    <style>
       html, body{padding: 0; margin: 0; background-color: black;}
       #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
     </style>
-
-<div class="jumbotron middle">
-      <div id="earth_div"></div>
-</div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    You can see the first page by clicking<a href="Tdata.twig" class="alert-link">on this link</a>.
-  </div> 
-</div>
-
-{% endblock %}
+    <title>WebGL Earth API: Markers</title>
+  </head>
+  <body onload="initialize()">
+    <div id="earth_div"></div>
+  </body>
+</html>
