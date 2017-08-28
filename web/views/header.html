@@ -4,7 +4,7 @@
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
 <script src="http://www.webglearth.com/v2/api.js"></script>
-    <script>
+<script>
       function initialize() {
         var earth = new WE.map('earth_div');
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
@@ -19,9 +19,6 @@
 
         earth.setView([51.505, 0], 2);
       }
-    </script>
-    <style>
-      html, body{padding: 0; margin: 0; background-color: black;}
-      #earth_div{top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
-    </style>
+</script>
+
     <title>WebGL Earth API: Markers</title>
